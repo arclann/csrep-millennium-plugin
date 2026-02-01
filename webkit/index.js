@@ -19,17 +19,14 @@
   }
 
   function getSteamId64Sync() {
-    // /profiles/7656119....
     const m = location.pathname.match(/^\/profiles\/(\d{17})\/?$/);
     if (m) return m[1];
 
-    // variável global (quando existe)
     try {
       const sid = window.g_rgProfileData?.steamid;
       if (is17Digit(sid)) return String(sid);
     } catch {}
 
-    // fallback: procura no HTML por steamid 17 dígitos
     const html = document.documentElement.innerHTML;
     const r = html.match(/"steamid"\s*:\s*"(\d{17})"/);
     if (r) return r[1];
@@ -71,14 +68,12 @@
           return;
         }
 
-        // abre na mesma "guia" do Steam
         location.assign(buildTargetUrl(steamId64));
       } catch {
         btn.textContent = "CSREP.GG";
       }
     });
 
-    // Coloca igual o botão do CSWAT, no começo
     if (target.classList?.contains("profile_header_actions")) {
       target.prepend(btn);
     } else {
