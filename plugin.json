@@ -1,0 +1,7 @@
+{
+  "name": "csrep_profile_link",
+  "common_name": "CSRep Profile Link",
+  "description": "Adds a CSRep button to Steam Community profile pages.",
+  "version": "1.0.0",
+  "useBackend": false
+}
