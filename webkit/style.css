@@ -1,0 +1,26 @@
+.csrep-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 32px;
+  padding: 0 12px;
+  margin-right: 8px;
+
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  cursor: pointer;
+
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+
+.csrep-btn:hover {
+  filter: brightness(1.1);
+}
+
+.csrep-btn:active {
+  transform: translateY(1px);
+}
